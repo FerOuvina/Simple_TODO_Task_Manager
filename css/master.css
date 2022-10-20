@@ -1,0 +1,123 @@
+:root {
+  --orange: #f8b195;
+  --red: #f67280;
+  --pink: #c06c84;
+  --purple: #6c5b7b;
+  --blue: #355c7d;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+body {
+  background: linear-gradient(var(--orange), var(--red), var(--pink), var(--purple), var(--blue));
+  overflow: hidden;
+}
+.main {
+  height: 93vh;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__container {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  width: 85%;
+  height: 95%;
+}
+.main__header {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+.main__article {
+  margin: 1rem;
+  width: 100%;
+  max-width: 90%;
+}
+.main__article--form {
+  display: flex;
+}
+.main__article--input {
+  width: 100%;
+  max-width: fit-content;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid rgba(71, 71, 71, 0.50);
+  border-radius: 0.5rem;
+}
+.main__article--form input:focus {
+  outline: none;
+  border: 1px solid var(--blue);
+}
+.main__article--btn {
+  width: 18%;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  box-shadow: 2px 4px 4px rgba(71, 71, 71, 0.16);
+  border-radius: 0.5rem;
+  color: #000;
+}
+.main__article--btn:hover {
+  color: wheat;
+}
+.main__article--btn:active {
+  border: 2px solid #000;
+}
+.main__task {
+  margin: 0 1rem;
+}
+.main__task--container {
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--red);
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 4px rgba(71, 71, 71, 0.16);
+}
+.main__task--p {
+  margin: 0 0.5rem;
+  width: 100%;
+}
+.main__task--checkIcon:hover {
+  color: wheat;
+  cursor: pointer;
+}
+.main__task--trashIcon:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+.main__footer {
+  background-color: var(--blue);
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main__footer--link {
+  text-decoration: none;
+  color: #000;
+}
+.main__footer a:hover {
+  color: wheat;
+}
+.main__footer a:active {
+  color: wheat;
+}
+.main__footer--link:visited {
+  color: #000;
+}
+.main__footer--icon {
+  font-size: 1.2rem;
+}

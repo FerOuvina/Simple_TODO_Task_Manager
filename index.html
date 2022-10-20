@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO Task Manager</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/master.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5fc0185a9e.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <section class="main">
+    <div class="main__container">
+
+
+      <!-- Main Header -->
+      <header class="main__header">
+        <i class="fa-solid fa-briefcase main__header--icon"></i>
+      </header>
+
+      <!-- Main Article -->
+      <article class="main__article">
+        <form action="" class="main__article--form">
+          <input type="text" placeholder="Tarea..." class="main__article--input" id="input">
+          <button type="submit" class="main__article--btn" id="btn"><i
+              class="fa-solid fa-check-to-slot main__article--icon"></i></button>
+        </form>
+      </article>
+
+      <!-- Second Article -->
+      <article class="main__task">
+        <div class="main__task--container">
+          <!-- <i class="fa-regular fa-square-check main__task--icon"></i> -->
+          <i class="fa-regular fa-square main__task--checkIcon" id="checkTask"></i>
+          <p class="main__task--p">Hacer curso de ReactJS</p>
+          <i class="fa-solid fa-trash-can main__task--trashIcon" id="deleteTask"></i>
+        </div>
+      </article>
+  </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main__footer">
+    <a href="https://github.com/FerOuvina" class="main__footer--link"><i
+        class="fa-brands fa-square-github main__footer--icon"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/fernando07/" class="main__footer--link"><i
+        class="fa-brands fa-linkedin main__footer--icon"></i> LinkedIn</a>
+  </footer>
+
+
+
+
+  <!-- Main script -->
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
