@@ -1,4 +1,3 @@
-/* Tablet */
 @media only screen 
   and (min-device-width: 768px) 
   and (-webkit-min-device-pixel-ratio: 1) {
@@ -27,8 +26,7 @@
       padding-left: 2px;
     }
     .main__task {
-      height: 70vh;
-      max-height: 70vh;
+      max-height: 60vh;
     }
 }
 @media only screen 
@@ -100,6 +98,9 @@
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
+    .main {
+      height: 90vh;
+    }
     .main__container {
       max-width: 65%;
     }
@@ -122,13 +123,16 @@
       padding-left: 5px;
     }
     .main__task {
-      height: 70vh;
-      max-height: 70vh;
+      max-height: 60vh;
     }
     .main__footer {
       justify-content: center;
     }
     .main__footer--link {
       padding: 0 2rem;
+    }
+    .main__task {
+      height: 70vh;
+      max-height: 70vh;
     }
 }

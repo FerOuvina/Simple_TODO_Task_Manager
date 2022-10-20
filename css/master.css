@@ -17,7 +17,7 @@ body {
   overflow: hidden;
 }
 .main {
-  height: 92vh;
+  height: 80vh;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@ body {
   color: wheat;
 }
 .main__article--btn:active {
-  border: 2px solid #000;
+  border: 2px solid rgba(71, 71, 71, 0.25);
 }
 .main__article--p {
   display: none;
@@ -82,7 +82,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 60vh;
-  max-height: 60vh;
+  max-height: 48vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -103,6 +103,7 @@ body {
 .main__task--p {
   margin: 0 0.5rem;
   width: 100%;
+  word-break: break-all;
 }
 .main__task--checkIcon:hover {
   color: wheat;
@@ -116,17 +117,17 @@ body {
   cursor: pointer;
 }
 .main__task--trashIcon:hover {
-  color: var(--orange);
+  color: wheat;
   cursor: pointer;
 }
 .main__task--trashIcon:active {
-  color: var(--orange);
+  color: wheat;
 }
 .main__footer {
-  height: 8vh;
-  margin-top: 0.1rem;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 0.5rem;
+  margin-bottom: 5rem;
 }
 .main__footer--link {
   text-decoration: none;
