@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/reset.css">
   <!-- Main CSS -->
   <link rel="stylesheet" href="./css/master.css">
+  <!-- Mediaquery CSS -->
+  <link rel="stylesheet" href="./css/mediaquerys.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5fc0185a9e.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
@@ -34,19 +36,13 @@
       <article class="main__article">
         <form action="" class="main__article--form">
           <input type="text" placeholder="Tarea..." class="main__article--input" id="input">
-          <button type="submit" class="main__article--btn" id="btn"><i
+          <button type="submit" class="main__article--btn" id="btn"><p class="main__article--p">Agregar</p><i
               class="fa-solid fa-check-to-slot main__article--icon"></i></button>
         </form>
       </article>
 
       <!-- Second Article -->
-      <article class="main__task">
-        <div class="main__task--container">
-          <!-- <i class="fa-regular fa-square-check main__task--icon"></i> -->
-          <i class="fa-regular fa-square main__task--checkIcon" id="checkTask"></i>
-          <p class="main__task--p">Hacer curso de ReactJS</p>
-          <i class="fa-solid fa-trash-can main__task--trashIcon" id="deleteTask"></i>
-        </div>
+      <article class="main__task" id="mainTask">
       </article>
   </section>
   </div>

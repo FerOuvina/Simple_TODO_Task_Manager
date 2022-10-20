@@ -17,7 +17,7 @@ body {
   overflow: hidden;
 }
 .main {
-  height: 93vh;
+  height: 92vh;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -72,8 +72,21 @@ body {
 .main__article--btn:active {
   border: 2px solid #000;
 }
+.main__article--p {
+  display: none;
+}
 .main__task {
+  width: 100%;
+  max-width: 90%;
   margin: 0 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 60vh;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .main__task--container {
   width: 100%;
@@ -95,13 +108,23 @@ body {
   color: wheat;
   cursor: pointer;
 }
+.main__task--checkIcon:active {
+  color: wheat;
+}
+.main__task--checkedIcon:hover {
+  color: wheat;
+  cursor: pointer;
+}
 .main__task--trashIcon:hover {
   color: var(--orange);
   cursor: pointer;
 }
+.main__task--trashIcon:active {
+  color: var(--orange);
+}
 .main__footer {
-  background-color: var(--blue);
-  height: 5vh;
+  height: 8vh;
+  margin-top: 0.1rem;
   display: flex;
   justify-content: space-evenly;
 }
