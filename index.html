@@ -17,7 +17,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 
@@ -25,7 +25,6 @@
 
   <section class="main">
     <div class="main__container">
-
 
       <!-- Main Header -->
       <header class="main__header">
@@ -35,14 +34,14 @@
       <!-- Main Article -->
       <article class="main__article">
         <form action="" class="main__article--form">
-          <input type="text" placeholder="Tarea..." class="main__article--input" id="input">
-          <button type="submit" class="main__article--btn" id="btn"><p class="main__article--p">Agregar</p><i
-              class="fa-solid fa-check-to-slot main__article--icon"></i></button>
+          <input type="text" placeholder="Tarea..." class="main__article--input" data-form-input>
+          <input type="date" name="date" class="main__article--date" data-form-date>
+          <button type="submit" class="main__article--btn" data-form-btn><p class="main__article--p">Agregar</p><i class="fa-solid fa-check-to-slot main__article--icon"></i></button>
         </form>
       </article>
 
       <!-- Second Article -->
-      <article class="main__task" id="mainTask">
+      <article class="main__task" data-main-task>
       </article>
   </section>
   </div>
@@ -58,6 +57,8 @@
 
 
 
+  <!-- Moment.js script -->
+  <script src="./js/moment.js"></script>
   <!-- Main script -->
   <script type="module" src="./js/script.js"></script>
 </body>

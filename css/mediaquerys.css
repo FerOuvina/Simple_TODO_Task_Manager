@@ -1,5 +1,6 @@
 @media only screen 
   and (min-device-width: 768px) 
+  and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
     .main__container {
       max-width: 65%;
@@ -26,7 +27,7 @@
       padding-left: 2px;
     }
     .main__task {
-      max-height: 60vh;
+      max-height: 70vh;
     }
 }
 @media only screen 
