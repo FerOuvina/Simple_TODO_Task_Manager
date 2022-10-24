@@ -4,18 +4,27 @@ const deleteIcon = document.querySelector('.main__task--trashIcon');
 const checkIcon = document.querySelector('.main__task--checkIcon');
 
 // Check/uncheck task function
-const completedTask = (event) => {
+const completedTask = (event, id) => {
   const element = event.target;
   element.classList.toggle('fa-regular');
   element.classList.toggle('fa-square-check');
   element.classList.toggle('fa-regular');
   element.classList.toggle('fa-square');
+  const getCheckId = JSON.parse(localStorage.getItem('tasks'));
+  const index = getCheckId.findIndex(item => item.id === id);
+  getCheckId[index]['complete'] = !getCheckId[index]['complete'];
+  localStorage.setItem('tasks', JSON.stringify(getCheckId));
 };
 
 // Delete task function 
-const deleteTask = (event) => {
-  const parent = event.target.parentElement;
-  parent.remove();
+const deleteTask = (id) => {
+  const mainContainer = document.querySelector('[data-main-task]');
+  const getLocalStorage = JSON.parse(localStorage.getItem('tasks'));
+  const findIndex = getLocalStorage.findIndex((item) => item.id === id);
+  getLocalStorage.splice(findIndex, 1);
+  localStorage.setItem('tasks', JSON.stringify(getLocalStorage));
+  mainContainer.innerHTML = '';
+  addTask();
 };
 
 // Function for verifying duplicated dates
@@ -42,17 +51,17 @@ const dateOrder = (dupDate) => {
 };
 
 // Functions for creating dom elements
-const createCheckIcon = () => {
+const createCheckIcon = (id) => {
   let createCheckIcon = document.createElement('i');
   createCheckIcon.classList.add('fa-regular', 'fa-square', 'main__task--checkIcon');
-  createCheckIcon.addEventListener('click', completedTask);
+  createCheckIcon.addEventListener('click', (event) => completedTask(event, id));
   return createCheckIcon;
 };
 
-const createDeleteIcon = () => {
+const createDeleteIcon = (id) => {
   let createDeleteIcon = document.createElement('i')
   createDeleteIcon.classList.add('fa-solid', 'fa-trash-can', 'main__task--trashIcon');
-  createDeleteIcon.addEventListener('click', deleteTask);
+  createDeleteIcon.addEventListener('click', () => deleteTask(id));
   return createDeleteIcon;
 };
 
@@ -74,7 +83,8 @@ const addTask = (event) => {
     return;
   };
 
-  const taskObject = {inputValue, dateFormat,};
+  const complete = false;
+  const taskObject = {inputValue, dateFormat, complete, id: uuid.v4(),};
   const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
   taskList.push(taskObject);
   localStorage.setItem('tasks', JSON.stringify(taskList));
@@ -84,7 +94,7 @@ const addTask = (event) => {
 };
 
 // Create task function
-const createTask = ({inputValue, dateFormat,}) => {
+const createTask = ({inputValue, dateFormat, complete, id,}) => {
   const createTaskContainer = document.createElement('div');
   createTaskContainer.classList.add('main__task--container');
 
@@ -96,10 +106,18 @@ const createTask = ({inputValue, dateFormat,}) => {
   date.classList.add('main__task--date');
   date.innerHTML = dateFormat;
 
-  createTaskContainer.appendChild(createCheckIcon());
+  const checkCompleted = createCheckIcon(id);
+  if (complete) {
+    checkCompleted.classList.toggle('fa-regular');
+    checkCompleted.classList.toggle('fa-square-check');
+    checkCompleted.classList.toggle('fa-regular');
+    checkCompleted.classList.toggle('fa-square');
+  };
+
+  createTaskContainer.appendChild(checkCompleted);
   createTaskContainer.appendChild(createTaskContent);
   createTaskContainer.appendChild(date);
-  createTaskContainer.appendChild(createDeleteIcon());
+  createTaskContainer.appendChild(createDeleteIcon(id));
   return createTaskContainer;
 };
 addTaskBtn.addEventListener('click', addTask);
@@ -124,3 +142,6 @@ const readTask = () => {
 };
 
 readTask()
+
+const a = uuid.v4();
+console.log(a)

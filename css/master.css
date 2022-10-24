@@ -46,7 +46,7 @@ body {
 }
 .main__article--input {
   width: 100%;
-  max-width: fit-content;
+  max-width: 100%;
   padding: 0.2rem 0.4rem;
   border: 1px solid rgba(71, 71, 71, 0.50);
   border-radius: 0.5rem;
