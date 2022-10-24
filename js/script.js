@@ -18,12 +18,12 @@ const completedTask = (event, id) => {
 
 // Delete task function 
 const deleteTask = (id) => {
-  const mainContainer = document.querySelector('[data-main-task]');
+  const mainContainer = document.querySelector('.main__task--container');
   const getLocalStorage = JSON.parse(localStorage.getItem('tasks'));
   const findIndex = getLocalStorage.findIndex((item) => item.id === id);
   getLocalStorage.splice(findIndex, 1);
   localStorage.setItem('tasks', JSON.stringify(getLocalStorage));
-  mainContainer.innerHTML = '';
+  mainContainer.parentNode.removeChild(mainContainer);
   addTask();
 };
 
@@ -140,8 +140,4 @@ const readTask = () => {
     });
   });
 };
-
 readTask()
-
-const a = uuid.v4();
-console.log(a)
